@@ -1,4 +1,3 @@
-
 # print("Welcome to the rollercoaster!")
 # height = int(input("What is your height in cm? "))
 # bill = 0
@@ -46,7 +45,7 @@
 # weight = int(input("Enter your weight in kilograms e.g., 72 "))
 # 🚨 Don't change the code above 👆
 
-#Write your code below this line 👇
+# Write your code below this line 👇
 #
 # bmi = weight / height**2
 # if bmi < 18.5 :
@@ -61,9 +60,9 @@
 #     print(f"Your BMI is {bmi}, you are clinically obese.")
 
 # =====================================
-"""Write a program that works out whether if a given year is a leap year. 
-A normal year has 365 days, leap years have 366, 
-with an extra day in February. 
+"""Write a program that works out whether if a given year is a leap year.
+A normal year has 365 days, leap years have 366,
+with an extra day in February.
 The reason why we have leap years is really fascinating,"""
 # Which year do you want to check?
 # year = int(input("Which year do you want to check? "))
@@ -82,44 +81,44 @@ The reason why we have leap years is really fascinating,"""
 #     print("Not leap year")
 
 # =============================
-"""Instructions
-
-Congratulations, you've got a job at Python Pizza! Your first job is to build an automatic pizza order program.
-
-Based on a user's order, work out their final bill.
-
-Small pizza (S): $15
-
-Medium pizza (M): $20
-
-Large pizza (L): $25
-
-Add pepperoni for small pizza (Y or N): +$2
-
-Add pepperoni for medium or large pizza (Y or N): +$3
-
-Add extra cheese for any size pizza (Y or N): +$1
-Example Input
-
-L
-Y
-N
-
-Example Output
-
-Thank you for choosing Python Pizza Deliveries!
-Your final bill is: $28.
-
-"""
+# """Instructions
+#
+# Congratulations, you've got a job at Python Pizza! Your first job is to build an automatic pizza order program.
+#
+# Based on a user's order, work out their final bill.
+#
+# Small pizza (S): $15
+#
+# Medium pizza (M): $20
+#
+# Large pizza (L): $25
+#
+# Add pepperoni for small pizza (Y or N): +$2
+#
+# Add pepperoni for medium or large pizza (Y or N): +$3
+#
+# Add extra cheese for any size pizza (Y or N): +$1
+# Example Input
+#
+# L
+# Y
+# N
+#
+# Example Output
+#
+# Thank you for choosing Python Pizza Deliveries!
+# Your final bill is: $28.
+#
+# """
 # print("Thank you for choosing Python Pizza Deliveries!")
 # size = input() # What size pizza do you want? S, M, or L
 # add_pepperoni = input() # Do you want pepperoni? Y or N
 # extra_cheese = input() # Do you want extra cheese? Y or N
 # # 🚨 Don't change the code above 👆
 # # Write your code below this line 👇
-#
+
 # bill = 0
-#
+
 # if size == "S":
 #     bill += 15
 #     if add_pepperoni == "Y":
@@ -141,130 +140,117 @@ Your final bill is: $28.
 # print(f"Thank you for choosing Python Pizza Deliveries! Your final bill is: ${bill}.")
 
 # =========================================
-
-"""Instructions
-💪 This is a difficult challenge! 💪
-
-You are going to write a program that tests the compatibility between two people.
-
-To work out the love score between two people:
-
-    Take both people's names and check for the number of times the letters in the word TRUE occurs.
-
-    Then check for the number of times the letters in the word LOVE occurs.
-
-    Then combine these numbers to make a 2 digit number.
-
-For Love Scores less than 10 or greater than 90, the message should be:
-
-"Your score is *x*, you go together like coke and mentos."
-
-For Love Scores between 40 and 50, the message should be:
-
-"Your score is *y*, you are alright together."
-
-Otherwise, the message will just be their score. e.g.:
-
-"Your score is *z*."
-
-e.g.
-
-name1 = "Angela Yu"
-name2 = "Jack Bauer"
-
-T occurs 0 times
-
-R occurs 1 time
-
-U occurs 2 times
-
-E occurs 2 times
-
-Total = 5
-
-L occurs 1 time
-
-O occurs 0 times
-
-V occurs 0 times
-
-E occurs 2 times
-
-Total = 3
-
-Love Score = 53
-
-Print: "Your score is 53."
-These functions will help you:
-
-lower() count()
-Example Input 1
-
-Kanye West
-Kim Kardashian
-
-Example Output 1
-
-The Love Calculator is calculating your score...
-Your score is 42, you are alright together.
-
-Example Input 2
-
-Brad Pitt
-Jennifer Aniston
-
-Example Output 2
-
-The Love Calculator is calculating your score...
-Your score is 73.
-
-Hint
-
-You can check your values against mine using this table:
-Name 1 	Name 2 	Score
-Brad Pitt 	Jennifer Aniston 	73
-Prince William 	Kate Middleton 	67
-Ashton Kutcher 	Mila Kunis 	63
-Angela Yu 	Jack Bauer 	53
-David Beckham 	Victoria Beckham 	45
-Mario 	Princess Peach 	43
-Kanye West 	Kim Kardashian 	42"""
+#
+# """Instructions
+# 💪 This is a difficult challenge! 💪
+#
+# You are going to write a program that tests the compatibility between two people.
+#
+# To work out the love score between two people:
+#
+#     Take both people's names and check for the number of times the letters in the word TRUE occurs.
+#
+#     Then check for the number of times the letters in the word LOVE occurs.
+#
+#     Then combine these numbers to make a 2 digit number.
+#
+# For Love Scores less than 10 or greater than 90, the message should be:
+#
+# "Your score is *x*, you go together like coke and mentos."
+#
+# For Love Scores between 40 and 50, the message should be:
+#
+# "Your score is *y*, you are alright together."
+#
+# Otherwise, the message will just be their score. e.g.:
+#
+# "Your score is *z*."
+#
+# e.g.
+#
+# name1 = "Angela Yu"
+# name2 = "Jack Bauer"
+#
+# T occurs 0 times
+#
+# R occurs 1 time
+#
+# U occurs 2 times
+#
+# E occurs 2 times
+#
+# Total = 5
+#
+# L occurs 1 time
+#
+# O occurs 0 times
+#
+# V occurs 0 times
+#
+# E occurs 2 times
+#
+# Total = 3
+#
+# Love Score = 53
+#
+# Print: "Your score is 53."
+# These functions will help you:
+#
+# lower() count()
+# Example Input 1
+#
+# Kanye West
+# Kim Kardashian
+#
+# Example Output 1
+#
+# The Love Calculator is calculating your score...
+# Your score is 42, you are alright together.
+#
+# Example Input 2
+#
+# Brad Pitt
+# Jennifer Aniston
+#
+# Example Output 2
+#
+# The Love Calculator is calculating your score...
+# Your score is 73.
+#
+# Hint
+#
+# You can check your values against mine using this table:
+# Name 1 	Name 2 	Score
+# Brad Pitt 	Jennifer Aniston 	73
+# Prince William 	Kate Middleton 	67
+# Ashton Kutcher 	Mila Kunis 	63
+# Angela Yu 	Jack Bauer 	53
+# David Beckham 	Victoria Beckham 	45
+# Mario 	Princess Peach 	43
+# Kanye West 	Kim Kardashian 	42"""
 
 print("The Love Calculator is calculating your score...")
-name1 = input() # What is your name?
-name2 = input() # What is their name?
+name1 = input()  # What is your name?
+name2 = input()  # What is their name?
 # 🚨 Don't change the code above 👆
 # Write your code below this line 👇
 
 combinate_name = name1 + name2
 lower_names = combinate_name.lower()
-t = lower_names.count('t')
-r = lower_names.count('r')
-u = lower_names.count('u')
-e = lower_names.count('e')
+t = lower_names.count("t")
+r = lower_names.count("r")
+u = lower_names.count("u")
+e = lower_names.count("e")
 
-first_digit = t+r+u+e
+first_digit = t + r + u + e
 
-l = lower_names.count('l')
-o = lower_names.count('o')
-v = lower_names.count('v')
-e = lower_names.count('e')
+l = lower_names.count("l")
+o = lower_names.count("o")
+v = lower_names.count("v")
+e = lower_names.count("e")
 
-second_digit = l+o+v+e
-#
-# print(f"T occurs {t} times")
-# print(f"R occurs {r} times")
-# print(f"U occurs {u} times")
-# print(f"E occurs {e} times")
-#
-# print(f'Total = {first_digit}')
-#
-# print(f"L occurs {l} times")
-# print(f"O occurs {o} times")
-# print(f"V occurs {v} times")
-# print(f"E occurs {e} times")
-#
-# print(f'Total = {second_digit}')
+second_digit = l + o + v + e
+
 love_score = int(str(first_digit) + str(second_digit))
 if love_score < 10 or love_score > 90:
     print(f"Your score is {love_score}, you go together like coke and mentos.")
@@ -272,3 +258,5 @@ elif 40 < love_score < 50:
     print(f"Your score is {love_score}, you are alright together.")
 else:
     print(f"Your score is {love_score}.")
+
+# =====================================

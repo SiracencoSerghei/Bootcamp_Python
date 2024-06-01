@@ -23,7 +23,7 @@ print(False)
 
 
 # len(123)  # TypeError: object of type 'int' has no len()
-print(type(123))
+print(int)
 
 # num_char = len(input("What is your name? "))
 # # print("Your name has " + num_char + " characters.")  # TypeError: can only concatenate str (not "int") to str
@@ -31,11 +31,11 @@ print(type(123))
 # print("Your name has " + str(num_char) + " characters.")
 
 print(70 + float("370.25"))
-print(str(70)+str(100))
+print(str(70) + str(100))
 # ====================================
 
-"""Write a program that adds the digits in a 2 digit number. 
-e.g. if the input was 35, 
+"""Write a program that adds the digits in a 2 digit number.
+e.g. if the input was 35,
 then the output should be 3 + 5 = 8"""
 #
 # two_digit_number = input("Input two digit number: ")
@@ -97,14 +97,14 @@ You have 1768 weeks left.
 
 # ===========================================
 
-#If the bill was $150.00, split between 5 people, with 12% tip.
+# If the bill was $150.00, split between 5 people, with 12% tip.
 
-#Each person should pay (150.00 / 5) * 1.12 = 33.6
-#Format the result to 2 decimal places = 33.60
+# Each person should pay (150.00 / 5) * 1.12 = 33.6
+# Format the result to 2 decimal places = 33.60
 
-#Tip: There are 2 ways to round a number. You might have to do some Googling to solve this.💪
+# Tip: There are 2 ways to round a number. You might have to do some Googling to solve this.💪
 
-#Write your code below this line 👇
+# Write your code below this line 👇
 """Example Input
 
 Welcome to the tip calculator!
@@ -120,4 +120,3 @@ bill_with_tip = tip / 100 * bill + bill  #  bill * (1 + tip/100)
 print(bill_with_tip)
 bill_by_person = round(bill_with_tip / people, 2)
 print(f"Each person should pay: ${bill_by_person:.2f}")
-
