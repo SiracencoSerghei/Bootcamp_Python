@@ -36,23 +36,6 @@ Hint
 
 """
 
-# ======================
-
-# programming_dictionary = {"Bug": "An error in a program that prevents the program from running as expected.", "Function": "A piece of code that you can easily call over and over again."}
-# for key in programming_dictionary:
-# 	print(key)
-# 	print(programming_dictionary[key])
-# print(programming_dictionary)
-#
-# programming_dictionary["greet"] = "hello"
-# for key, value in programming_dictionary.items():
-# 	print(key)
-# 	print(value)
-# 	print(programming_dictionary[key])
-# print(programming_dictionary)
-
-# =======================
-
 student_scores = {
   "Harry": 81,
   "Ron": 78,
