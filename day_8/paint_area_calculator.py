@@ -27,11 +27,13 @@ Hint
 Stackoveflow link on how to round up a number: https://stackoverflow.com/questions/2356501/how-do-you-round-up-a-number-in-python
 
 """
+import math
+
 
 # Write your code below this line 👇
 def paint_calc(height, width, cover):
 	numbers_of_cans = (height * width) / cover
-	return  numbers_of_cans
+	return  print(f"You'll need {math.ceil(numbers_of_cans)} cans of paint.")
 
 # Write your code above this line 👆
 # Define a function called paint_calc() so the code below works.
