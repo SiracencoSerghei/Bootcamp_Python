@@ -1,3 +1,10 @@
+## Program requirements:
+1. Print report.
+2. Check resources sufficient?
+3. Process coins.
+4. Check transaction successful?
+5. Make coffee.
+
 ## Coffee Machine Program Requirements
 
 1. Prompt user by asking “What would you like? (espresso/latte/cappuccino/):”
