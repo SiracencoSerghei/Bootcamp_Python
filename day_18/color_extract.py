@@ -6,6 +6,7 @@ colors = colorgram.extract('image.jpg', 30)
 for color in colors:
     rgb_colors.append(color.rgb)
 print(rgb_colors)
+print([tuple(color) for color in rgb_colors])
 #
 # from PIL import Image
 #
