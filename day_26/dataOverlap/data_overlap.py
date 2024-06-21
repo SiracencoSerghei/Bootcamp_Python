@@ -44,10 +44,18 @@ Hint
 
 
 
+with open('file1.txt') as f1:
+  file1 = f1.readlines()
+file1 = [int(num.strip()) for num in file1]
 
+with open('file2.txt') as f2:
+  file2 = [int(num.strip()) for num in f2.readlines()]
+  
+result = [num for num in file1 if num in file2]
 
 
 
 
 # Write your code above 👆
 print(result)
+
