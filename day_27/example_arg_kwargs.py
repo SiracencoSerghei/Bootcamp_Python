@@ -34,7 +34,8 @@ class Car:
         self.seats = kw.get("seats")
 
 
-my_car = Car(2, 3, make="Nissan", model="Skyline", color = "green", seats = 4)
+my_car = Car(2, 3, make="Nissan", model="Skyline")
 print(my_car.model)
+print(my_car.colour)
 print(my_car.seats)
 print(my_car.ar1)
