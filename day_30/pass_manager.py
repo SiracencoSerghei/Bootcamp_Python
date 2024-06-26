@@ -108,9 +108,9 @@ def generate_password():
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save():
 
-    website = website_entry.get()
-    email = email_entry.get()
-    password = password_entry.get()
+    website = website_entry.get().strip()
+    email = email_entry.get().strip()
+    password = password_entry.get().strip()
     new_data = {
         website: {
             "email": email,
