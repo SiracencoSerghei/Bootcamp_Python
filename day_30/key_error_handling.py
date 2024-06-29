@@ -30,6 +30,7 @@ Hint
     Posts without any likes can be counted as 0 likes.
 
 """
+
 import json
 
 # eval() function will create a list of dictionaries using the input
@@ -39,9 +40,9 @@ total_likes = 0
 # TODO: Catch the KeyError exception
 for post in facebook_posts:
     try:
-        total_likes += post['Likes']
+        total_likes += post["Likes"]
     except KeyError:
         total_likes += 0
-        
+
 print(facebook_posts)
 print(f"{total_likes = }")

@@ -1,5 +1,6 @@
-from tkinter import *
 import math
+from tkinter import *
+
 # ---------------------------- CONSTANTS ------------------------------- #
 PINK = "#e2979c"
 RED = "#e7305b"
@@ -12,7 +13,8 @@ LONG_BREAK_MIN = 20
 reps = 0
 timer = None
 
-# ---------------------------- TIMER RESET ------------------------------- # 
+# ---------------------------- TIMER RESET ------------------------------- #
+
 
 def reset_timer():
     window.after_cancel(timer)
@@ -23,7 +25,8 @@ def reset_timer():
     reps = 0
 
 
-# ---------------------------- TIMER MECHANISM ------------------------------- # 
+# ---------------------------- TIMER MECHANISM ------------------------------- #
+
 
 def start_timer():
     global reps
@@ -59,7 +62,7 @@ def count_down(count):
     else:
         start_timer()
         marks = ""
-        work_sessions = math.floor(reps/2)
+        work_sessions = math.floor(reps / 2)
         for _ in range(work_sessions):
             marks += "✔"
         check_marks.config(text=marks)
@@ -77,7 +80,9 @@ title_label.grid(column=1, row=0)
 canvas = Canvas(width=200, height=224, bg=YELLOW, highlightthickness=0)
 tomato_img = PhotoImage(file="tomato.png")
 canvas.create_image(100, 112, image=tomato_img)
-timer_text = canvas.create_text(100, 130, text="00:00", fill="white", font=(FONT_NAME, 35, "bold"))
+timer_text = canvas.create_text(
+    100, 130, text="00:00", fill="white", font=(FONT_NAME, 35, "bold")
+)
 canvas.grid(column=1, row=1)
 
 start_button = Button(text="Start", highlightthickness=0, command=start_timer)
@@ -91,14 +96,3 @@ check_marks.grid(column=1, row=3)
 
 
 window.mainloop()
-
-
-
-
-
-
-
-
-
-
-

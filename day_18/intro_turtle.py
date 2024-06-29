@@ -1,5 +1,6 @@
 ##### Turtle Intro ######
 import random
+
 # from turtle import Turtle, Screen
 #
 # # Create screen object
@@ -102,7 +103,16 @@ import random
 # screen = t.Screen()
 # tim = t.Turtle()
 #
-colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "wheat", "SlateGray", "SeaGreen"]
+colours = [
+    "CornflowerBlue",
+    "DarkOrchid",
+    "IndianRed",
+    "DeepSkyBlue",
+    "LightSeaGreen",
+    "wheat",
+    "SlateGray",
+    "SeaGreen",
+]
 
 # def drow_shape(num_sides, side_length):
 #     angle = 360 / num_sides
@@ -134,18 +144,18 @@ colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSea
 ######## Challenge 5 Spirograph ############
 import turtle as t
 
-
 tim = t.Turtle()
 t.colormode(255)
 # tim.pensize(15)
 tim.speed("fastest")
+
 
 def random_color():
     r = random.randint(0, 255)
     g = random.randint(0, 255)
     b = random.randint(0, 255)
     color = (r, g, b)
-    return  color
+    return color
 
 
 def draw_spirograph(size_of_gap):
@@ -153,6 +163,7 @@ def draw_spirograph(size_of_gap):
         tim.color(random_color())
         tim.circle(100)
         tim.setheading(tim.heading() + size_of_gap)
+
 
 draw_spirograph(5)
 

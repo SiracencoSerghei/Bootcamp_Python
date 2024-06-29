@@ -46,11 +46,11 @@ average height = 158
 student_heights = input("Input a Python list of student heights: ").split()
 total_height = 0
 for n in range(0, len(student_heights)):
-	student_heights[n] = int(student_heights[n])
-# 🚨 Don't change the code above 👆
-# Write your code below this row 
+    student_heights[n] = int(student_heights[n])
+    # 🚨 Don't change the code above 👆
+    # Write your code below this row
 
-	total_height += student_heights[n]
+    total_height += student_heights[n]
 
 print(f"total height = {total_height}")
 print(f"number of students = {len(student_heights)}")

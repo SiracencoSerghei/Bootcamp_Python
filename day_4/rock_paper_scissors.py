@@ -1,33 +1,34 @@
 import random
-rock = '''
+
+rock = """
     _______
 ---'   ____)
       (_____)
       (_____)
       (____)
 ---.__(___)
-'''
+"""
 
-paper = '''
+paper = """
     _______
 ---'   ____)____
           ______)
           _______)
          _______)
 ---.__________)
-'''
+"""
 
-scissors = '''
+scissors = """
     _______
 ---'   ____)____
           ______)
        __________)
       (____)
 ---.__(___)
-'''
+"""
 
 # Write your code below this line 👇
-random_choice = random.randint(0,2)
+random_choice = random.randint(0, 2)
 variants = [rock, paper, scissors]
 computer_variant = variants[random_choice]
 
@@ -36,8 +37,8 @@ while True:
     try:
         personal_choice = int(
             input(
-                "What is your choice? Type 0 for Rock, 1 for Paper, or 2 for Scissors.\n"
-            )
+                "What is your choice? Type 0 for Rock, 1 for Paper, or 2 for Scissors.\n",
+            ),
         )
         if personal_choice in [0, 1, 2]:
             break

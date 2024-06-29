@@ -1,5 +1,5 @@
-from turtle import Turtle
 import os
+from turtle import Turtle
 
 ALIGNMENT = "center"
 FONT = ("Courier", 24, "normal")
@@ -17,9 +17,14 @@ class Scoreboard(Turtle):
         self.goto(0, 270)
         self.hideturtle()
         self.update_scoreboard()
+
     def update_scoreboard(self):
         self.clear()
-        self.write(f"Score: {self.score} High Score: {self.high_score}", align=ALIGNMENT, font=FONT)
+        self.write(
+            f"Score: {self.score} High Score: {self.high_score}",
+            align=ALIGNMENT,
+            font=FONT,
+        )
 
     def reset(self):
         if self.score > self.high_score:
@@ -32,5 +37,3 @@ class Scoreboard(Turtle):
     def increase_score(self):
         self.score += 1
         self.update_scoreboard()
-
-

@@ -27,6 +27,7 @@ Hint
 There are quite a few ways of solving this problem, but you will need to use the range() function in any of the solutions.
 
 """
+
 target = int(input("Enter a number between 0 and 1000: "))
 # 🚨 Do not change the code above ☝️
 
@@ -35,9 +36,8 @@ even_sum = 0
 # numbers = range(2, target + 1, 2)
 # for num in numbers:
 # 	even_sum += num
-numbers = range(1, target +1)
+numbers = range(1, target + 1)
 for num in numbers:
-	if num % 2 == 0:
-		even_sum += num
+    if num % 2 == 0:
+        even_sum += num
 print(even_sum)
-

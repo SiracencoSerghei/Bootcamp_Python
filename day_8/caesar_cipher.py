@@ -58,9 +58,10 @@
 # else:
 #     print("You not enter the correct....")
 
+from alphabet import alphabet
 # ========================================
 from art import logo
-from alphabet import alphabet
+
 
 def caesar(start_text, shift_amount, cipher_direction):
     end_text = ""
@@ -81,7 +82,7 @@ if __name__ == "__main__":
 
     should_continue = True
     while should_continue:
-            
+
         print(logo)
 
         direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
@@ -90,6 +91,6 @@ if __name__ == "__main__":
 
         caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
         go_again = input("Do you want to continue? Y/N ").lower()
-        if not go_again == 'y':
+        if not go_again == "y":
             should_continue = False
             print("Good Bye!")

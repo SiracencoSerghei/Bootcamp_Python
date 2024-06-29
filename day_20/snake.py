@@ -1,4 +1,4 @@
-from turtle import Turtle, Screen
+from turtle import Screen, Turtle
 
 STARTING_POSITIONS = [(0, 0), (-20, 0), (-40, 0)]
 MOVE_DISTANCE = 20
@@ -6,6 +6,8 @@ UP = 90
 DOWN = 270
 LEFT = 180
 RIGHT = 0
+
+
 class Snake:
 
     def __init__(self, screen):
@@ -21,7 +23,7 @@ class Snake:
             new_segment.penup()
             new_segment.goto(position)
             self.segments.append(new_segment)
-    
+
     def move(self):
         for seg_num in range((len(self.segments) - 1), 0, -1):
             new_x = self.segments[seg_num - 1].xcor()
@@ -36,16 +38,18 @@ class Snake:
     def up(self):
         if self.head.heading() != DOWN:
             self.head.setheading(UP)
+
     def down(self):
         if self.head.heading() != UP:
             self.head.setheading(DOWN)
+
     def left(self):
         if self.head.heading() != RIGHT:
             self.head.setheading(LEFT)
+
     def right(self):
         if self.head.heading() != LEFT:
             self.head.setheading(RIGHT)
-        
 
     def is_at_border(self):
         # Get the current screen dimensions
@@ -65,22 +69,22 @@ class Snake:
         return False
 
     def run_game(self):
-        
+
         screen = Screen()
         screen.setup(width=600, height=600)
         screen.bgcolor("black")
         screen.title("My Snake Game")
         # screen.tracer(0)
-        
+
         snake = Snake()
         # food = Food()
-        
+
         screen.listen()
         screen.onkey(snake.up, "Up")
         screen.onkey(snake.down, "Down")
         screen.onkey(snake.left, "Left")
         screen.onkey(snake.right, "Right")
-        
+
         game_is_on = True
         while game_is_on:
             screen.update()
@@ -88,5 +92,5 @@ class Snake:
             if snake.is_at_border():
                 continue
             snake.move()
-        
+
         screen.exitonclick()

@@ -33,16 +33,18 @@ It's not a prime number.
 
 # Write your code below this line 👇
 
+
 def prime_checker(number):
-  is_prime = True
-  prime_msg = "It's a prime number."
-  not_prime_msg = "It's Not a prime number."
-  range_num = range(2, number)
-  print(list(range_num))
-  for i in range_num:
-	  if number % i == 0:
-		  is_prime = False
-  print(f"{prime_msg if is_prime else not_prime_msg}")
+    is_prime = True
+    prime_msg = "It's a prime number."
+    not_prime_msg = "It's Not a prime number."
+    range_num = range(2, number)
+    print(list(range_num))
+    for i in range_num:
+        if number % i == 0:
+            is_prime = False
+    print(f"{prime_msg if is_prime else not_prime_msg}")
+
 
 # Write your code above this line 👆
 

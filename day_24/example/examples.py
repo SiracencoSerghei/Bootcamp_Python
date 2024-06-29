@@ -8,11 +8,11 @@
 # file.close()
 
 with open("my_text.txt") as file:  # "r" by default
-	for line_num, line in enumerate(file, start=1):
-		print(line_num, line)
-		
-		
+    for line_num, line in enumerate(file, start=1):
+        print(line_num, line)
+
+
 new_text = input("Input some text, please... ")
 
 with open("my_text.txt", "a+") as file:  # "w" rewrite all in file
-	file.write(f"\n{new_text}")
+    file.write(f"\n{new_text}")

@@ -1,6 +1,7 @@
-from tkinter import *
-import pandas
 import random
+from tkinter import *
+
+import pandas
 
 BACKGROUND_COLOR = "#B1DDC6"
 current_card = {}
@@ -66,6 +67,3 @@ known_button.grid(row=1, column=1)
 next_card()
 
 window.mainloop()
-
-
-

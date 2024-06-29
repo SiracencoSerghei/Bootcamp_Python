@@ -37,21 +37,21 @@ Hint
 """
 
 student_scores = {
-  "Harry": 81,
-  "Ron": 78,
-  "Hermione": 99,
-  "Draco": 74,
-  "Neville": 62,
+    "Harry": 81,
+    "Ron": 78,
+    "Hermione": 99,
+    "Draco": 74,
+    "Neville": 62,
 }
 # 🚨 Don't change the code above 👆
 # TODO-1: Create an empty dictionary called student_grades.
-student_grades = dict() # =  {}
+student_grades = dict()  # =  {}
 
 
 # TODO-2: Write your code below to add the grades to student_grades.👇
 for student in student_scores:
-	score = student_scores[student]
-	"""
+    score = student_scores[student]
+    """
     Scores 91 - 100: Grade = "Outstanding"
 
     Scores 81 - 90: Grade = "Exceeds Expectations"
@@ -60,17 +60,16 @@ for student in student_scores:
 
     Scores 70 or lower: Grade = "Fail"
 """
-	if score <= 70:
-		student_grades[student] = "Fail"
-	elif 70 < score <80:
-		student_grades[student] = "Acceptable"
-	elif 80 < score < 90:
-		student_grades[student] = "Exceeds Expectations"
-	elif 90 < score < 100:
-		student_grades[student] = "Outstanding"
-	else:
-		print("You have something wrong!")
-		
+    if score <= 70:
+        student_grades[student] = "Fail"
+    elif 70 < score < 80:
+        student_grades[student] = "Acceptable"
+    elif 80 < score < 90:
+        student_grades[student] = "Exceeds Expectations"
+    elif 90 < score < 100:
+        student_grades[student] = "Outstanding"
+    else:
+        print("You have something wrong!")
+
 # 🚨 Don't change the code below 👇
 print(student_grades)
-

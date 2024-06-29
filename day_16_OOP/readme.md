@@ -45,7 +45,7 @@ continue to make the drink but print: “Sorry there is not enough water.”
 prompt the user to insert coins.
 
     b. Remember that quarters = $0.25, dimes = $0.10, nickles = $0.05, pennies = $0.01
-    
+
     c. Calculate the monetary value of the coins inserted. E.g. 1 quarter, 2 dimes, 1 nickel, 2
 pennies = 0.25 + 0.1 x 2 + 0.05 + 0.01 x 2 = $0.52
 

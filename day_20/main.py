@@ -1,6 +1,8 @@
-from turtle import Screen
-from snake import Snake
 import time
+from turtle import Screen
+
+from snake import Snake
+
 
 def run_game():
     screen = Screen()
@@ -26,5 +28,6 @@ def run_game():
         snake.move()
 
     screen.exitonclick()
+
 
 run_game()

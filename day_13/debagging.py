@@ -37,7 +37,7 @@
 # total_words = pages * word_per_page
 # print(total_words)
 
-#Use a Debugger
+# Use a Debugger
 # https://pythontutor.com/visualize.html#mode=edit
 # def mutate(a_list):
 #   b_list = []

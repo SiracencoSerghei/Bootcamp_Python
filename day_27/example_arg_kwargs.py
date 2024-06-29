@@ -6,6 +6,8 @@ def add(*args):
     for n in args:
         sum += n
     return sum
+
+
 # print(add(3, 5, 6, 2, 1, 7, 4, 3))
 
 

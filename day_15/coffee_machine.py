@@ -21,7 +21,7 @@ MENU = {
             "coffee": 24,
         },
         "cost": 3.0,
-    }
+    },
 }
 
 profit = 0
@@ -73,7 +73,7 @@ def make_coffee(drink_name, order_ingredients):
 
 def run_coffee_machine():
     is_on = True
-    
+
     while is_on:
         choice = input("    What would you like? (espresso/latte/cappuccino): ")
         if choice == "off":
@@ -89,6 +89,6 @@ def run_coffee_machine():
                 payment = process_coins()
                 if is_transaction_successful(payment, drink["cost"]):
                     make_coffee(choice, drink["ingredients"])
-    
+
 
 run_coffee_machine()

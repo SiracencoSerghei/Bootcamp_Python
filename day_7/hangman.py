@@ -1,4 +1,3 @@
-
 # # Step 1
 # import random
 #
@@ -17,7 +16,7 @@
 
 # =================================================
 
-#Step 2
+# Step 2
 
 # import random
 # word_list = ["aardvark", "baboon", "camel"]
@@ -50,7 +49,7 @@
 
 # ===============================================================
 
-#Step 3
+# Step 3
 #
 # import random
 # word_list = ["aardvark", "baboon", "camel"]
@@ -86,7 +85,7 @@
 
 # =============================================================
 
-#Step 4
+# Step 4
 
 # import random
 #
@@ -192,10 +191,10 @@
 #
 #     #TODO-3: - print the ASCII art from 'stages' that corresponds to the current number of 'lives' the user has remaining.
 #     print(stages[lives])
-    
+
 # =======================================================
 
-#Step 5
+# Step 5
 
 # import random
 
@@ -252,19 +251,23 @@
 
 #     #TODO-2: - Import the stages from hangman_art.py and make this error go away.
 #     print(stages[lives])
-    
-    # =======================================
-    
+
+# =======================================
+
+import os
 import random
+
 from hangman_art import logo, stages
 from hangman_words import word_list
-import os
+
 
 def clear():
-    if 'TERM' in os.environ:
-        os.system('clear' if os.name != 'nt' else 'cls')
+    if "TERM" in os.environ:
+        os.system("clear" if os.name != "nt" else "cls")
     else:
         print("\033[H\033[J", end="")
+
+
 clear()
 print(logo)
 chosed_word = random.choice(word_list)
@@ -275,7 +278,7 @@ end_of_game = False
 display = []
 for _ in chosed_word:
     display += "_"
-    
+
 while not end_of_game:
     print(f"Need to guess the word... {' '.join(display)}")
     guess = input(("Guess a letter: ").lower())

@@ -1,4 +1,5 @@
 import another_module
+
 print(another_module.another_variable)
 #
 # import turtle
@@ -20,7 +21,7 @@ table = PrettyTable()
 # table.add_row(["Squirtle", "Water"])
 # table.add_row(["Charmander", "Fire"])
 
-table.add_column("Pokemon Name", ["Pikachu", "Squirtle", "Charmander",], "l")
+table.add_column("Pokemon Name", ["Pikachu", "Squirtle", "Charmander"], "l")
 table.add_column("Type", ["Electric", "Water", "Fire"])
 table.align = "l"
 table.align["Type"] = "r"

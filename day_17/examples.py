@@ -1,4 +1,3 @@
-
 # class User:
 #     pass
 #
@@ -30,8 +29,9 @@
 
 #  Methods
 
+
 class User:
-    def __init__(self, user_id,username,):
+    def __init__(self, user_id, username):
         print("New user is being created....")
         self.id = user_id
         self.username = username
@@ -39,6 +39,7 @@ class User:
 
     def follow(self):
         self.followers += 1
+
     def unfollow(self):
         self.followers -= 1
 

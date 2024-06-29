@@ -22,23 +22,26 @@ Hint
 
     You'll need the try, except and else keywords.
 """
+
 import json
 
 fruits_input = input()
 fruits = json.loads(fruits_input)
 # 🚨 Do not change the code above
 
+
 # TODO: Catch the exception and make sure the code runs without crashing.
 def make_pie(index):
-	try:
-		fruit = fruits[index]
-		print(fruit + " pie")
-	except IndexError:
-		print("Fruit pie")
-	else:
-		print(fruit + " pie")
-	finally:
-		print("Ciao")
+    try:
+        fruit = fruits[index]
+        print(fruit + " pie")
+    except IndexError:
+        print("Fruit pie")
+    else:
+        print(fruit + " pie")
+    finally:
+        print("Ciao")
+
 
 # 🚨 Do not change the code below
 make_pie(4)

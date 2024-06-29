@@ -38,6 +38,7 @@ Hints
     Remember that Lists start at index 0!
 
 """
+
 # You are working in a team of developers.
 # Another developer has written the code to import the names in the inputs
 # You can run the code to see what this names list looks like.
@@ -46,24 +47,64 @@ Hints
 # we have: ['Angela', 'Ben', 'Jenny', 'Michael', 'Chloe']
 # 🚨 Remember to remove the print statement above when you submit.
 import random
-names = ['Angela', 'Ben', 'Jenny', 'Michael', 'Chloe']
+
+names = ["Angela", "Ben", "Jenny", "Michael", "Chloe"]
 people_quantity = len(names)
 print(f"we are in {people_quantity} people.")
-chosen_person = names[random.randint(0, (people_quantity-1))]
+chosen_person = names[random.randint(0, (people_quantity - 1))]
 print(f"{chosen_person.capitalize()} is going to buy the meal today!")
 
 states_of_usa = [
-    "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado",
-    "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho",
-    "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana",
-    "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota",
-    "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada",
-    "New Hampshire", "New Jersey", "New Mexico", "New York",
-    "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon",
-    "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota",
-    "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington",
-    "West Virginia", "Wisconsin", "Wyoming"
+    "Alabama",
+    "Alaska",
+    "Arizona",
+    "Arkansas",
+    "California",
+    "Colorado",
+    "Connecticut",
+    "Delaware",
+    "Florida",
+    "Georgia",
+    "Hawaii",
+    "Idaho",
+    "Illinois",
+    "Indiana",
+    "Iowa",
+    "Kansas",
+    "Kentucky",
+    "Louisiana",
+    "Maine",
+    "Maryland",
+    "Massachusetts",
+    "Michigan",
+    "Minnesota",
+    "Mississippi",
+    "Missouri",
+    "Montana",
+    "Nebraska",
+    "Nevada",
+    "New Hampshire",
+    "New Jersey",
+    "New Mexico",
+    "New York",
+    "North Carolina",
+    "North Dakota",
+    "Ohio",
+    "Oklahoma",
+    "Oregon",
+    "Pennsylvania",
+    "Rhode Island",
+    "South Carolina",
+    "South Dakota",
+    "Tennessee",
+    "Texas",
+    "Utah",
+    "Vermont",
+    "Virginia",
+    "Washington",
+    "West Virginia",
+    "Wisconsin",
+    "Wyoming",
 ]
 print(states_of_usa[1])
 print(states_of_usa.index("Pennsylvania"))
-
