@@ -112,7 +112,7 @@ def play_game():
         else:
             # Hint 10: If the game has not ended, ask the user if they want to draw another card. If yes, then use the deal_card() function to add another card to the user_cards List. If no, then the game has ended.
             user_should_deal = input(
-                "Type 'y' to get another card, type 'n' to pass: "
+                "Type 'y' to get another card, type 'n' to pass: ",
             ).lower()
             if user_should_deal == "y":
                 user_cards.append(deal_card())

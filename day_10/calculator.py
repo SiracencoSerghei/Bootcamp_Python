@@ -49,7 +49,7 @@ def calculate():
         answer = calculation_func(num1, num2)
         print(f"{num1} {operation_symbol} {num2} = {answer}")
         want_to_continue = input(
-            f"Type 'y' to continue calculating with {answer}, type 'n' to start a new calculation or 'q' for exit: "
+            f"Type 'y' to continue calculating with {answer}, type 'n' to start a new calculation or 'q' for exit: ",
         )
         if want_to_continue == "y":
             num1 = answer
@@ -61,7 +61,7 @@ def calculate():
             # calculate()
             clear()
             num1 = float(
-                input("What's the first number?: ")
+                input("What's the first number?: "),
             )  # Reset num1 for a new calculation
             for operator in operations:
                 print(operator)

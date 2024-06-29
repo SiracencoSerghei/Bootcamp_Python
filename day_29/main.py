@@ -87,7 +87,8 @@ def save():
 
     if len(website) == 0 or len(password) == 0:
         messagebox.showinfo(
-            title="Oops", message="Please make sure you haven't left any fields empty."
+            title="Oops",
+            message="Please make sure you haven't left any fields empty.",
         )
     else:
         is_ok = messagebox.askokcancel(
