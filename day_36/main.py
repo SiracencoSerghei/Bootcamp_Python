@@ -1,8 +1,13 @@
+import json
+import os
 import requests
 from twilio.rest import Client
+from dotenv import load_dotenv
 
-VIRTUAL_TWILIO_NUMBER = "your virtual twilio number"
-VERIFIED_NUMBER = "your own phone number verified with Twilio"
+load_dotenv()
+
+VIRTUAL_TWILIO_NUMBER = os.getenv("my_tel_number")
+VERIFIED_NUMBER = os.getenv("from_number")
 
 STOCK_NAME = "TSLA"
 COMPANY_NAME = "Tesla Inc"
@@ -10,10 +15,11 @@ COMPANY_NAME = "Tesla Inc"
 STOCK_ENDPOINT = "https://www.alphavantage.co/query"
 NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
 
-STOCK_API_KEY = "YOUR OWN API KEY FROM ALPHAVANTAGE"
-NEWS_API_KEY = "YOUR OWN API KEY FROM NEWSAPI"
-TWILIO_SID = "YOUR TWILIO ACCOUNT SID"
-TWILIO_AUTH_TOKEN = "YOUR TWILIO AUTH TOKEN"
+STOCK_API_KEY = os.getenv("STOCK_API_KEY")
+print(STOCK_API_KEY)
+NEWS_API_KEY = os.getenv("NEWS_API_KEY")
+TWILIO_SID = os.getenv("account_sid")
+TWILIO_AUTH_TOKEN = os.getenv("TWILIO_TOKEN")
 
 ## STEP 1: Use https://www.alphavantage.co/documentation/#daily
 # When stock price increase/decreases by 5% between yesterday and the day before yesterday then print("Get News").
@@ -27,12 +33,14 @@ stock_params = {
 
 response = requests.get(STOCK_ENDPOINT, params=stock_params)
 data = response.json()["Time Series (Daily)"]
+# formatted_data = json.dumps(data, indent=4)
+# print(formatted_data)
 data_list = [value for (key, value) in data.items()]
 yesterday_data = data_list[0]
 yesterday_closing_price = yesterday_data["4. close"]
 print(yesterday_closing_price)
 
-#Get the day before yesterday's closing stock price
+# #Get the day before yesterday's closing stock price
 day_before_yesterday_data = data_list[1]
 day_before_yesterday_closing_price = day_before_yesterday_data["4. close"]
 print(day_before_yesterday_closing_price)
@@ -44,13 +52,12 @@ if difference > 0:
     up_down = "🔺"
 else:
     up_down = "🔻"
-
 #Work out the percentage difference in price between closing price yesterday and closing price the day before yesterday.
-diff_percent = round((difference / float(yesterday_closing_price)) * 100)
-print(diff_percent)
+diff_percent = round((abs(difference) / float(yesterday_closing_price)) * 100)
+print(up_down, diff_percent, "%")
 
 
-    ## STEP 2: Instead of printing ("Get News"), actually get the first 3 news pieces for the COMPANY_NAME.
+#     ## STEP 2: Instead of printing ("Get News"), actually get the first 3 news pieces for the COMPANY_NAME.
 
 #Instead of printing ("Get News"), use the News API to get articles related to the COMPANY_NAME.
 #If difference percentage is greater than 5 then print("Get News").
@@ -65,7 +72,7 @@ if abs(diff_percent) > 1:
 
     #Use Python slice operator to create a list that contains the first 3 articles. Hint: https://stackoverflow.com/questions/509211/understanding-slice-notation
     three_articles = articles[:3]
-    print(three_articles)
+    # print(three_articles)
 
     ## STEP 3: Use Twilio to send a seperate message with each article's title and description to your phone number.
 
@@ -82,3 +89,4 @@ if abs(diff_percent) > 1:
             from_=VIRTUAL_TWILIO_NUMBER,
             to=VERIFIED_NUMBER
         )
+        print(message)
