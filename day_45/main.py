@@ -1,39 +1,52 @@
+# check robots.txt     !!!
+
 from bs4 import BeautifulSoup
-# import lxml
-# import html5lib
+import requests
 
-with open("website.html") as html_file:
-	content = html_file.read()
+# Live Website (will change over time)
+response = requests.get("https://news.ycombinator.com/")
+yc_web_page = response.text
 
-# soup = BeautifulSoup(content, "lxml")
-# soup = BeautifulSoup(content, "html5lib")
-soup = BeautifulSoup(content, "html.parser") # html.parser  is buil-in
-# print(soup.title)    # <title>Angela's Personal Site</title>
-# print(soup.title.name)    # title
-# print(soup.title.string)  # Angela's Personal Site
-# print(soup.p)
-# print(soup.find_all(name="p"))
-# print(soup.a)
-# print(soup.prettify())
+soup = BeautifulSoup(yc_web_page, "html.parser")
 
-# all_anchor_tags = soup.find_all(name="a")
-# for tag in all_anchor_tags:
-# 	print(tag.getText())
-# 	print(tag.get("href"))
-	
-# heading = soup.find(name="h1", id="name")
-# print(heading)
+# head_tag = soup.head
+# print(f"{head_tag = }")
+    
+article_tag = soup.find(name="span", class_ = "titleline")
+# print(article_tag)
+# article_text = article_tag.getText()
+# article_link = article_tag.find(name="a").get("href")
+article_upvote = soup.find(name="span", class_="score").getText()
+# print(article_text)
+# print(f"{article_link = }")
+# print(article_upvote)
 
-# section_heading = soup.find(name="h3", class_ = "heading")  # class will be error, need class_
-# print(section_heading)
-# print(section_heading.getText())
+articles = soup.find_all(name="span", class_ = "titleline")
+article_texts = []
+article_links = []
+for article_tag in articles:
+	text = article_tag.getText()
+	article_texts.append(text)
+	link = article_tag.find(name="a").get("href")
+	article_links.append(link)
 
-# company_url = soup.select_one(selector="p a")
-# print(company_url)
-# name = soup.select_one(selector="#name")
-# print(name)
-#
-# heading = soup.select(".heading")
-# print(heading)
+# print(f"{article_texts = }")
+# print(f"{article_links = }")
 
+scores = soup.find_all(class_="score")
+# This uses a conditional expression to handle cases where there are no upvotes (span is None)
+# article_upvotes = [int(line.getText().strip(" points")) if line else 0 for line in scores]
+article_upvotes = [int(line.getText().strip(" points")) or 0 for line in scores]
+# print(f"{article_upvotes = }")
+
+largest_number = max(article_upvotes)
+largest_index = article_upvotes.index(largest_number)
+# print(largest_number)
+# print(largest_index)
+
+print(
+	f"Most upvoted article: {article_texts[largest_index]}\n"
+	f"Number of upvotes: {article_upvotes[largest_index]} points\n"
+	f"Available at: {article_links[largest_index]}."
+	)
 
