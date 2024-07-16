@@ -8,7 +8,7 @@ from selenium.webdriver.common.keys import Keys
 load_dotenv()
 FIRST_NAME = os.environ.get("FIRST_NAME")
 LAST_NAME = os.environ.get("LAST_NAME")
-EMAIL_ADDRESS = os.environ.get("EMAIL_ADDRESS")
+EMAIL_ADDRESS = os.environ.get("MY_EMAIL")
 
 checking_url = "http://secure-retreat-92358.herokuapp.com/"
 
@@ -29,7 +29,7 @@ email_address = driver.find_element(By.XPATH, value='/html/body/form/input[3]')
 
 first_name.send_keys(FIRST_NAME)
 last_name.send_keys(LAST_NAME)
-email_address.send_keys(EMAIL_ADDRESS)
+email_address.send_keys(MY_EMAIL)
 
 time.sleep(3.5)
 

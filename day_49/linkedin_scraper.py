@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-ACCOUNT_EMAIL = os.environ.get("EMAIL_ADDRESS")
+ACCOUNT_EMAIL = os.environ.get("MY_EMAIL")
 ACCOUNT_PASSWORD = os.environ.get("LINKEDIN_ACCOUNT_PASSWORD")
 PHONE = os.environ.get("my_tel_number")
 chrome_options = webdriver.ChromeOptions()

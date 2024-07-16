@@ -10,7 +10,7 @@ from selenium.common.exceptions import ElementClickInterceptedException, NoSuchE
 
 load_dotenv()
 
-FB_EMAIL = os.environ.get("EMAIL_ADDRESS")
+FB_EMAIL = os.environ.get("MY_EMAIL")
 FB_PASSWORD = os.environ.get("FB_PASSWORD")
 
 chrome_options = webdriver.ChromeOptions()
