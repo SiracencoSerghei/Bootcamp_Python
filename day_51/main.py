@@ -10,19 +10,19 @@ load_dotenv()
 
 PROMISED_DOWN = 150
 PROMISED_UP = 10
-FB_EMAIL = os.environ.get("MY_EMAIL")
-FB_PASSWORD = os.environ.get("TWITTER_PASSWORD")
+TWITTER_EMAIL = os.environ.get("MY_EMAIL")
+TWITTER_PASSWORD = os.environ.get("TWITTER_PASSWORD")
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_experimental_option("detach", True)
 driver = webdriver.Chrome(options=chrome_options)
 
-driver_path = "/usr/bin/google-chrome"
+# driver_path = "/usr/bin/google-chrome"
 
 time.sleep(3)
 
 class InternetSpeedTwitterBot:
-    def __init__(self, driver_path):
+    def __init__(self):
         self.driver = webdriver.Chrome()
         self.up = 0
         self.down = 0
@@ -70,6 +70,6 @@ class InternetSpeedTwitterBot:
         self.driver.quit()
 
 
-bot = InternetSpeedTwitterBot(driver_path)
+bot = InternetSpeedTwitterBot()
 bot.get_internet_speed()
 bot.tweet_at_provider()
