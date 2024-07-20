@@ -1,0 +1,139 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+
+<!--<head>-->
+<!--  <meta charset="utf-8">-->
+<!--  <title>Serghei Siracenco</title>-->
+<!--  <link rel="stylesheet" href="../static/css/styles.css">-->
+<!--  <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Sacramento" rel="stylesheet">-->
+<!--  <link rel="icon" href="../static/favicon.ico">-->
+<!--</head>-->
+
+<!--<body>-->
+<!--  <div class="top-container">-->
+<!--    <img class="top-cloud" src="../static/images/cloud.png" alt="cloud">-->
+<!--    <div class="title-text">-->
+<!--      <h1>I'm Serghei.</h1>-->
+<!--      <h2>a <span class="pro">pro</span>grammer.</h2>-->
+<!--    </div>-->
+<!--    <img class="bottom-cloud" src="../static/images/cloud.png" alt="cloud">-->
+<!--    <img class="mountain" src="../static/images/mountain.png" alt="mountain-img">-->
+<!--  </div>-->
+
+<!--  <div class="middle-container">-->
+<!--    <div class="profile">-->
+<!--      <img src="../static/images/sergio.png" alt="sergio-profile-img">-->
+<!--      <h2>Hello.</h2>-->
+<!--      <p class="intro">Hello! 👋 I'm Serghei Siracenco, a Full Stack Developer passionate about crafting seamless and efficient web applications.</p>-->
+<!--    </div>-->
+<!--    <hr>-->
+<!--    <div class="skills">-->
+<!--      <h2>My Skills.</h2>-->
+<!--      <div class="skill-row">-->
+<!--        <img class="code-img" src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" alt="code-img">-->
+
+<!--        <h3>Development</h3>-->
+<!--        <p>I dance through the digital realms, orchestrating a symphony of technologies. Here's a glimpse into my repertoire:-->
+<!--            <ul>-->
+<!--                <li>Front-End Ballet: HTML5, CSS (SASS), JavaScript, React, Redux - where pixels pirouette and style twirls.</li>-->
+<!--                <li>Back-End Wizardry: Node.js, Python - scripting spells for backend brilliance.</li>-->
+<!--                <li>Databases Waltz: SQL (SQLite, PostgreSQL, MariaDB), NoSQL (MongoDB) - a choreography of data.</li>-->
+<!--                <li>Frameworks Fusion: FastAPI, Flask, Django - the frameworks that harmonize my coding crescendo.</li>-->
+<!--            </ul>-->
+
+<!--This is just the prelude! Beyond the coding symphony, I hold a Licentiate degree in Accounting and Finance from Academia de Studii Economice din Moldova, adding a touch of financial finesse to my composition.</p>-->
+
+<!--      </div>-->
+<!--      <div class="skill-row">-->
+<!--        <img class="chilli-img" src="../static/images/chillies.png" alt="chillies-img">-->
+
+<!--        <h3>Hot Wings Challenge</h3>-->
+<!--        <p>But my best skill is actually in eating hot wings 😵‍💫 . I am the undisputed queen of hot wing challenges. Ghost Peppers and Carolina Reapers are my favourite snacks.</p>-->
+
+<!--      </div>-->
+<!--    </div>-->
+<!--    <hr>-->
+<!--    <div class="contact-me">-->
+<!--      <h2>Get In Touch</h2>-->
+<!--      <h3>If you love hot wings as much as I do.</h3>-->
+<!--      <p class="contact-message">Love hot wings as much as I do? Let's talk about how awesome they are! We can code while we eat hot wings!</p>-->
+<!--      <a class="btn" href="mailto:ilove@hotwings.com">CONTACT ME</a>-->
+<!--    </div>-->
+<!--  </div>-->
+
+
+<!--  <div class="bottom-container">-->
+<!--    <a class="footer-link" href="https://www.linkedin.com/in/siracenco-serghei/">LinkedIn</a>-->
+<!--    <a class="footer-link" href="https://github.com/SiracencoSerghei">GitHub</a>-->
+<!--    <p class="copyright">© 2024 @ Serghei Siracenco.</p>-->
+<!--  </div>-->
+<!--</body>-->
+
+<!--</html>-->
+
+<!--=============================================-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Serghei Siracenco</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Sacramento" rel="stylesheet">
+  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+  <div class="top-container">
+    <img class="top-cloud" src="{{ url_for('static', filename='images/cloud.png') }}" alt="cloud">
+    <div class="title-text">
+      <h1>I'm Serghei.</h1>
+      <h2>a <span class="pro">pro</span>grammer.</h2>
+    </div>
+    <img class="bottom-cloud" src="{{ url_for('static', filename='images/cloud.png') }}" alt="cloud">
+    <img class="mountain" src="{{ url_for('static', filename='images/mountain.png') }}" alt="mountain-img">
+  </div>
+
+  <div class="middle-container">
+    <div class="profile">
+      <img src="{{ url_for('static', filename='images/sergio.png') }}" alt="sergio-profile-img">
+      <h2>Hello.</h2>
+      <p class="intro">Hello! 👋 I'm Serghei Siracenco, a Full Stack Developer passionate about crafting seamless and efficient web applications.</p>
+    </div>
+    <hr>
+    <div class="skills">
+      <h2>My Skills.</h2>
+      <div class="skill-row">
+        <img class="code-img" src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" alt="code-img">
+        <h3>Development</h3>
+        <p>I dance through the digital realms, orchestrating a symphony of technologies. Here's a glimpse into my repertoire:
+            <ul>
+                <li>Front-End Ballet: HTML5, CSS (SASS), JavaScript, React, Redux - where pixels pirouette and style twirls.</li>
+                <li>Back-End Wizardry: Node.js, Python - scripting spells for backend brilliance.</li>
+                <li>Databases Waltz: SQL (SQLite, PostgreSQL, MariaDB), NoSQL (MongoDB) - a choreography of data.</li>
+                <li>Frameworks Fusion: FastAPI, Flask, Django - the frameworks that harmonize my coding crescendo.</li>
+            </ul>
+        This is just the prelude! Beyond the coding symphony, I hold a Licentiate degree in Accounting and Finance from Academia de Studii Economice din Moldova, adding a touch of financial finesse to my composition.</p>
+      </div>
+      <div class="skill-row">
+        <img class="chilli-img" src="{{ url_for('static', filename='images/chillies.png') }}" alt="chillies-img">
+        <h3>Hot Wings Challenge</h3>
+        <p>But my best skill is actually in eating hot wings 😵‍💫. I am the undisputed queen of hot wing challenges. Ghost Peppers and Carolina Reapers are my favourite snacks.</p>
+      </div>
+    </div>
+    <hr>
+    <div class="contact-me">
+      <h2>Get In Touch</h2>
+      <h3>If you love hot wings as much as I do.</h3>
+      <p class="contact-message">Love hot wings as much as I do? Let's talk about how awesome they are! We can code while we eat hot wings!</p>
+      <a class="btn" href="mailto:ilove@hotwings.com">CONTACT ME</a>
+    </div>
+  </div>
+
+  <div class="bottom-container">
+    <a class="footer-link" href="https://www.linkedin.com/in/siracenco-serghei/">LinkedIn</a>
+    <a class="footer-link" href="https://github.com/SiracencoSerghei">GitHub</a>
+    <a class="footer-link" href="{{ url_for('floating') }}">Floating</a>
+    <p class="copyright">© 2024 @ Serghei Siracenco.</p>
+  </div>
+</body>
+</html>
