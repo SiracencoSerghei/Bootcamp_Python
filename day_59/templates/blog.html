@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+    <style>
+        body {
+            background-image: url({{post['image_url']}});
+            background-size: cover;
+            background-position::after;
+        }
+    </style>
+
+<body>
+    <div style="padding: 20, 20px;
+    background-color: rgba(240, 248, 255, 0.5);">
+        <h1>{{ post["title"] }}</h1>
+        <h2>{{ post["subtitle"] }}</h2>
+        <p>{{ post["body"] }}</p>
+    </div>
+</body>
+
+</html>
