@@ -26,14 +26,27 @@ def guess(name):
     return render_template("guess.html", person_name=name, gender=gender, age=age)
 
 
-@app.route("/blog/<num>")
-def get_blog(num):
-    print(num)
-    blog_url = "https://api.npoint.io/5abcca6f4e39b4955965"
+@app.route("/blogs")
+def get_blogs():
+    blog_url = "https://api.npoint.io/03a5af93f91ac9b1f073"
     response = requests.get(blog_url)
     all_posts = response.json()
-    print(f"{all_posts = }")
-    return render_template("blog.html", posts=all_posts)
+    return render_template("blogs.html", posts=all_posts)
+
+@app.route("/blog/<int:num>")
+def get_blog(num):
+    blog_url = "https://api.npoint.io/03a5af93f91ac9b1f073"
+    response = requests.get(blog_url)
+    all_posts = response.json()
+    for post in all_posts:
+        if post["id"] == num:
+            return render_template("blog.html", post=post)
+    return render_template("404.html"), 404
+
+# Custom 404 error handler
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
 
 
 if __name__ == "__main__":
