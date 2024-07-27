@@ -76,14 +76,21 @@ with app.app_context():
 #     db.session.add(new_movie)
 #     db.session.commit()
 
+def get_all_movies():
+    result = db.session.execute(db.select(Movie).order_by(Movie.rating.desc()))
+    all_movies = result.scalars().all()
+    
+    for i, movie in enumerate(all_movies):
+        movie.ranking = i + 1
+    
+    db.session.commit()
+    return all_movies
+
 @app.route("/")
 def home():
-    global all_movies
-    all_movies = Movie.query.order_by(Movie.rating).all()
-    for i in range(len(all_movies)):
-        all_movies[i].ranking = len(all_movies) - i
-    db.session.commit()
+    all_movies = get_all_movies()
     return render_template("index.html", movies=all_movies)
+
 
 @app.route("/add", methods=["GET", "POST"])
 def add():
