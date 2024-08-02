@@ -26,6 +26,7 @@ env/
 
 # Ignore Jupyter Notebook cache files
 __pycache__/
+__pycache__
 
 # Ignore any other generated files or directories
 */build/
