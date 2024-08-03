@@ -4,7 +4,7 @@ import dotenv
 import os
 import smtplib
 
-from flask import Flask, abort, render_template, redirect, url_for, flash
+from flask import Flask, abort, render_template,request, redirect, url_for, flash
 from flask_bootstrap import Bootstrap5
 from flask_ckeditor import CKEditor
 from flask_gravatar import Gravatar
@@ -54,7 +54,7 @@ gravatar = Gravatar(app,
 # CREATE DATABASE
 class Base(DeclarativeBase):
     pass
-app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{db_path}'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_URI", f"sqlite:///{db_path}" )
 db = SQLAlchemy(model_class=Base)
 db.init_app(app)
 
@@ -285,5 +285,7 @@ def login():
 def logout():
     logout_user()
     return redirect(url_for('get_all_posts'))
+
 if __name__ == "__main__":
     app.run(debug=True, port=5001)
+
