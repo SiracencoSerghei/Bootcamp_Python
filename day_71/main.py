@@ -14,9 +14,9 @@ from sqlalchemy.orm import relationship, DeclarativeBase, Mapped, mapped_column
 from sqlalchemy import Integer, String, Text
 from werkzeug.security import generate_password_hash, check_password_hash
 from sqlalchemy.orm import relationship
-from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
+from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm, ContactForm
 
-dotenv.load_dotenv
+dotenv.load_dotenv()
 
 SECRET = os.environ.get("PASSWD")
 MAIL_ADDRESS = os.environ.get("MY_EMAIL")
@@ -209,11 +209,16 @@ def about():
 
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
-    if request.method == "POST":
-        data = request.form
-        send_email(data["name"], data["email"], data["phone"], data["message"])
-        return render_template("contact.html", msg_sent=True)
-    return render_template("contact.html", msg_sent=False)
+    form = ContactForm()
+    if form.validate_on_submit():
+        name = form.name.data
+        email = form.email.data
+        phone = form.phone.data
+        message = form.message.data
+        send_email(name, email, phone, message)
+        form = ContactForm(formdata=None)
+        return render_template("contact.html", form=form, msg_sent=True)
+    return render_template("contact.html", form=form, msg_sent=False)
 
 
 def send_email(name, email, phone, message):
@@ -222,7 +227,7 @@ def send_email(name, email, phone, message):
     with connection:
         connection.starttls()
         connection.login(MAIL_ADDRESS, MAIL_APP_PW)
-        connection.sendmail(MAIL_ADDRESS, MAIL_APP_PW, email_message)
+        connection.sendmail(from_addr=email, to_addrs=MAIL_ADDRESS, msg=email_message)
 
 
 
